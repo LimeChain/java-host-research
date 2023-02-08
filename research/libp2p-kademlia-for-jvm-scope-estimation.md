@@ -6,8 +6,6 @@
 
 ## Estimation
 
-**12-14 weeks for 1 FTE**
-
 **8 weeks for 2 FTEs**
 
 ## Implementation scope
