@@ -1,0 +1,3 @@
+[submodule "wasmer-java"]
+	path = wasmer-java
+	url = https://github.com/Limechain/wasmer-java

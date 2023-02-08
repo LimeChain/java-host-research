@@ -12,5 +12,23 @@ Additionally 2 more documents were created:
 - [Scope & Estimation for Libp2p JVM Yamux Implementation](https://github.com/LimeChain/java-host-research/blob/main/research/libp2p-yamux-jvm-scope-estimation.md)
 
 ## Proof of Concept Demo
+Prerequisites - Docker
 
+You can check if you have docker installed by running `docker -v`
+
+If you don't have docker you can download it from [here](https://docs.docker.com/get-docker/)
+
+PoC consists of a couple of carefully tailored examples which would be called in the docker container
+and have their output saved in a text file in the container.
+
+1. create the docker image - `docker build -t wasmer-java wasmer-java`
+2. create and enter container - `sudo docker run -it wasmer-java bash`
+3. view output file - `less /opt/wasmer-java/output.txt`
+
+The first example being run tests imports by loading a runtime requiring the following imports: ![img.png](imports.png)
+
+The second example manipulates memory through a pointer returned by the function invoked
+
+Both of the examples as well as the wasm files can be found [here](https://github.com/LimeChain/wasmer-java/tree/master/examples).
+Note that the runtime wasm file also has a wat variant and the hello_world wasm file was compiled from the rust file with the same name.
 ### Testing guide
