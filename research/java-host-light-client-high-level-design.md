@@ -18,6 +18,16 @@ No overhead should be added to the light-client architecture. Instead, developer
 
 ![Polkadot Light Client Diagram.drawio.svg](./diagrams/polkadot-light-client-diagram.svg)
 
+## Host Configuration
+
+The Host Configuration is an utility module and as the name suggests - designed to hold Host specific information that will be used by other modules. It can be expanded as more and more functionality is added to the Host. 
+
+Should Host features or modules be configurable in some way by the user, the configuration parameters should be added to this module. These parameters can include but are not limited to client parameters that the host is launching with such as:
+
+- Chain ID
+- Path to custom chain specification
+- Debug mode “on” parameter that will contain more logs
+
 ## Network
 
 The light client is a mostly passive participant in the protocol. However, it’s an active participant in the p2p network and as such it must implement most of the networking protocols. A networking module is to be created which encapsulates these protocols and their accompanying methods.
